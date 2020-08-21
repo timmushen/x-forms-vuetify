@@ -1,0 +1,35 @@
+{
+  "name": "@xenterprises/x-forms-vuetify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "module.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/timmushen/x-forms-vuetify.git"
+  },
+  "author": "X Enterprises",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/timmushen/x-forms-vuetify/issues"
+  },
+  "homepage": "https://github.com/timmushen/x-forms-vuetify#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.0",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^24.1.0",
+    "jest": "^26.4.0",
+    "vue": "^2.6.11",
+    "vue-jest": "^3.0.5",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify": "^2.3.8"
+  },
+  "dependencies": {
+    "v-mask": "^2.2.3",
+    "vee-validate": "^3.3.9",
+    "vue-currency-input": "^1.21.0"
+  }
+}
