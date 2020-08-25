@@ -1,30 +1,30 @@
 <template>
-  <ValidationProvider :name="$attrs.label" :rules="rules" v-slot="{ errors, valid }">
-    <v-menu :close-on-content-click="true" max-width="460px" min-width="290px" offset-y>
-      <template v-slot:activator="{ on }">
-        <v-text-field
-          :value="computedDateFormattedMomentjs"
-          v-bind="$attrs"
-          readonly
-          v-on="on"
-          @click:clear="innerValue = null"
-          :error-messages="errors"
-          prepend-inner-icon="event"
-        ></v-text-field>
-      </template>
-      <v-date-picker
-        @change="menu1 = false"
-        v-model="innerValue"
-        :max="$attrs.max"
-        :min="$attrs.min"
-        :show-current="new Date().toISOString().substr(0, 10)"
-      ></v-date-picker>
-    </v-menu>
-  </ValidationProvider>
+	<ValidationProvider :name="$attrs.label" :rules="rules" v-slot="{ errors, valid }">
+		<v-menu :close-on-content-click="true" max-width="460px" min-width="290px" offset-y>
+			<template v-slot:activator="{ on }">
+				<v-text-field
+					:value="computedDateFormattedMomentjs"
+					v-bind="$attrs"
+					readonly
+					v-on="on"
+					@click:clear="innerValue = null"
+					:error-messages="errors"
+					prepend-inner-icon="mdi-event"
+				></v-text-field>
+			</template>
+			<v-date-picker
+				@change="menu1 = false"
+				v-model="innerValue"
+				:max="$attrs.max"
+				:min="$attrs.min"
+				:show-current="new Date().toISOString().substr(0, 10)"
+			></v-date-picker>
+		</v-menu>
+	</ValidationProvider>
 </template>
 
 <script>
-import { ValidationProvider } from 'vee-validate'
+import { ValidationProvider } from "vee-validate";
 
 export default {
 	components: {
@@ -33,7 +33,7 @@ export default {
 	props: {
 		rules: {
 			type: [Object, String],
-			default: '',
+			default: "",
 		},
 		// must be included in props
 		value: {
@@ -41,31 +41,31 @@ export default {
 		},
 	},
 	data: () => ({
-		innerValue: '',
+		innerValue: "",
 	}),
 	watch: {
 		// Handles internal model changes.
 		innerValue(newVal) {
-			this.$emit('input', newVal)
+			this.$emit("input", newVal);
 		},
 		// Handles external model changes.
 		value(newVal) {
-			this.innerValue = newVal
+			this.innerValue = newVal;
 		},
 	},
 	computed: {
 		computedDateFormattedMomentjs() {
 			return this.innerValue
-				? this.$moment(this.innerValue).format('M/DD/YYYY')
-				: null
+				? this.$moment(this.innerValue).format("M/DD/YYYY")
+				: null;
 		},
 	},
 	created() {
 		if (this.value) {
-			this.innerValue = this.value
+			this.innerValue = this.value;
 		}
 	},
-}
+};
 </script>
 <style lang="scss" scoped>
 .v-input fieldset {
