@@ -30,6 +30,7 @@
   "dependencies": {
     "v-mask": "^2.2.3",
     "vee-validate": "^3.3.9",
+    "vue-currency-filter": "^5.1.1",
     "vue-currency-input": "^1.21.0"
   }
 }
