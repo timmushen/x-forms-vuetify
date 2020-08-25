@@ -20,7 +20,7 @@ export default function (moduleOptions) {
   // Register `plugin.js` template
   this.addPlugin(path.resolve(__dirname, 'plugins/vee-validate.js'))
   this.addPlugin(path.resolve(__dirname, 'plugins/v-mask.js'))
-  this.addPlugin(path.resolve(__dirname, 'plugins/vue-currency-inputs.js'))
+  this.addPlugin(path.resolve(__dirname, 'plugins/vue-currency-input.js'))
 
   // Forms test
   // this.extendRoutes(routes => {
