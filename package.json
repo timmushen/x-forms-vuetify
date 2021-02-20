@@ -22,15 +22,15 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^24.1.0",
     "jest": "^26.4.0",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-jest": "^3.0.5",
-    "vue-template-compiler": "^2.6.11",
+    "vue-template-compiler": "^2.6.12",
     "vuetify": "^2.3.9"
   },
   "dependencies": {
-    "v-mask": "^2.2.3",
-    "vee-validate": "^3.3.9",
-    "vue-currency-filter": "^5.1.1",
-    "vue-currency-input": "^1.21.0"
+    "v-mask": "^2.2.4",
+    "vee-validate": "^3.4.5",
+    "vue-currency-filter": "^5.2.0",
+    "vue-currency-input": "^1.22.6"
   }
 }
