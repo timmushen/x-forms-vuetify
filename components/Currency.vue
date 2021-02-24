@@ -42,7 +42,7 @@ export default {
 				distractionFree: false,
 				valueAsInteger: false,
 				autoDecimalMode: false,
-				currency: "USD",
+				currency: null,
 			};
 		},
 	},

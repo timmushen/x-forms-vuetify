@@ -1,6 +1,6 @@
 {
   "name": "@xenterprises/x-forms-vuetify",
-  "version": "1.1.5",
+  "version": "1.1.7",
   "description": "",
   "main": "module.js",
   "scripts": {
@@ -25,7 +25,8 @@
     "vue": "^2.6.12",
     "vue-jest": "^3.0.5",
     "vue-template-compiler": "^2.6.12",
-    "vuetify": "^2.3.9"
+    "vuetify": "^2.3.9",
+    "tiptap-vuetify": "^2.24.0"
   },
   "dependencies": {
     "v-mask": "^2.2.4",

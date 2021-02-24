@@ -21,6 +21,7 @@ export default function (moduleOptions) {
   this.addPlugin(path.resolve(__dirname, 'plugins/vee-validate.js'))
   this.addPlugin(path.resolve(__dirname, 'plugins/v-mask.js'))
   this.addPlugin(path.resolve(__dirname, 'plugins/vue-currency-input.js'))
+  this.addPlugin(path.resolve(__dirname, 'plugins/tiptap.js'))
 
   this.addModule('vue-currency-input/nuxt', {})
 
