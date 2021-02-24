@@ -40,7 +40,7 @@ export default {
 		options() {
 			return {
 				distractionFree: false,
-				valueAsInteger: true,
+				valueAsInteger: false,
 				autoDecimalMode: true,
 				currency: null,
 			};
