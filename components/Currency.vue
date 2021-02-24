@@ -41,8 +41,8 @@ export default {
 			return {
 				distractionFree: false,
 				valueAsInteger: false,
-				autoDecimalMode: true,
-				currency: null,
+				autoDecimalMode: false,
+				currency: "USD",
 			};
 		},
 	},

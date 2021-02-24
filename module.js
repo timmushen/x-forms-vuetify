@@ -22,7 +22,7 @@ export default function (moduleOptions) {
   this.addPlugin(path.resolve(__dirname, 'plugins/v-mask.js'))
   this.addPlugin(path.resolve(__dirname, 'plugins/vue-currency-input.js'))
 
-  this.addModule('vue-currency-input/nuxt', { globalOptions: { currency: 'USD' } })
+  this.addModule('vue-currency-input/nuxt', {})
 
   // Forms test
   // this.extendRoutes(routes => {
