@@ -14,7 +14,6 @@
 				v-bind="$attrs"
 				v-on="$listeners"
 				:extensions="extensions"
-				:toolbar-attributes="{ color: 'grey lighten-2' }"
 			/>
 		</div>
 	</ValidationProvider>
