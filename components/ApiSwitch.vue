@@ -21,16 +21,14 @@ export default {
 			default: "Active",
 		},
 	},
-	data: () => ({
-		form: "",
-	}),
+	data: () => ({}),
 	methods: {
 		onSubmit: async function () {
 			this.$store.state.theme.loading = true;
+			const form = {};
+			form[this.propertyName] = this.value;
 			await this.$axios
-				.put(`${this.put}`, {
-					"`${this.propertyName}`": this.value,
-				})
+				.put(`${this.put}`, form)
 				.then(async (response) => {
 					this.$store.state.theme.loading = false;
 				})
