@@ -13,6 +13,7 @@
 export default {
 	props: {
 		value: Boolean,
+		propertyName: String,
 		id: String,
 		put: String,
 		label: {
@@ -28,7 +29,7 @@ export default {
 			this.$store.state.theme.loading = true;
 			await this.$axios
 				.put(`${this.put}`, {
-					active: this.value,
+					"`${this.propertyName}`": this.value,
 				})
 				.then(async (response) => {
 					this.$store.state.theme.loading = false;
