@@ -1,6 +1,6 @@
 {
   "name": "@xenterprises/x-forms-vuetify",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "",
   "main": "module.js",
   "scripts": {
@@ -26,12 +26,12 @@
     "vue-jest": "^3.0.5",
     "vue-template-compiler": "^2.6.12",
     "vuetify": "^2.3.9",
-    "tiptap-vuetify": "^2.24.0"
   },
   "dependencies": {
     "v-mask": "^2.2.4",
     "vee-validate": "^3.4.5",
     "vue-currency-filter": "^5.2.0",
-    "vue-currency-input": "^1.22.6"
+    "vue-currency-input": "^1.22.6",
+    "tiptap-vuetify": "^2.24.0"
   }
 }
