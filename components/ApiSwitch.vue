@@ -5,6 +5,8 @@
 			:label="label"
 			color="primary"
 			@change="onSubmit"
+			v-bind="$attrs"
+			v-on="$listeners"
 		></v-switch>
 	</div>
 </template>
