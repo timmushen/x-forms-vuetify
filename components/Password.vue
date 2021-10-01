@@ -1,11 +1,15 @@
 <template>
-	<ValidationProvider :name="$attrs.label" :rules="rules" v-slot="{ errors, valid }">
+	<ValidationProvider
+		:name="$attrs.label"
+		:rules="rules"
+		v-slot="{ errors, valid }"
+	>
 		<v-text-field
 			v-model="innerValue"
 			:error-messages="errors"
 			v-bind="$attrs"
 			v-on="$listeners"
-			:append-icon="p_value ? 'mdi-visibility' : 'mdi-visibility_off'"
+			:append-icon="p_value ? 'mdi-eye' : 'mdi-eye-off'"
 			@click:append="() => (p_value = !p_value)"
 			:type="p_value ? 'password' : 'text'"
 		></v-text-field>
