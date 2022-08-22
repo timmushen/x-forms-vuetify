@@ -19,7 +19,7 @@ import {
 } from "vee-validate/dist/rules";
 
 const dateValidate = (value) => {
-  let tmpValArr = value.split("-");
+  let tmpValArr = value.split("/");
   if (tmpValArr[0] && tmpValArr[1] && tmpValArr[2]) {
     if (parseInt(tmpValArr[0]) > 12 || parseInt(tmpValArr[0]) < 1) {
       return true;
@@ -53,7 +53,7 @@ const dateValidate = (value) => {
 };
 
 const dobDateValidate = (value) => {
-  let tmpValArr = value.split("/");
+  let tmpValArr = value.split("-");
   if (tmpValArr[0] && tmpValArr[1] && tmpValArr[2]) {
     if (parseInt(tmpValArr[0]) > 12 || parseInt(tmpValArr[0]) < 1) {
       return true;
@@ -62,7 +62,7 @@ const dobDateValidate = (value) => {
       return true;
     }
     // check 1900< year <3000
-    if (parseInt(tmpValArr[2]) > 3000 || parseInt(tmpValArr[2]) < 1900) {
+    if (parseInt(tmpValArr[2]) > 2100 || parseInt(tmpValArr[2]) < 1920) {
       return true;
     } else {
       if (parseInt(tmpValArr[0]) < 10) {
