@@ -19,6 +19,40 @@ import {
 } from "vee-validate/dist/rules";
 
 const dateValidate = (value) => {
+  let tmpValArr = value.split("-");
+  if (tmpValArr[0] && tmpValArr[1] && tmpValArr[2]) {
+    if (parseInt(tmpValArr[0]) > 12 || parseInt(tmpValArr[0]) < 1) {
+      return true;
+    }
+    if (parseInt(tmpValArr[1]) > 31 || parseInt(tmpValArr[1]) < 1) {
+      return true;
+    }
+    // check 1900< year <3000
+    if (parseInt(tmpValArr[2]) > 3000 || parseInt(tmpValArr[2]) < 1900) {
+      return true;
+    } else {
+      if (parseInt(tmpValArr[0]) < 10) {
+        if (tmpValArr[0].charAt(0) !== "0") {
+          return true;
+        }
+      }
+      if (parseInt(tmpValArr[1]) < 10) {
+        if (tmpValArr[1].charAt(0) !== "0") {
+          return true;
+        }
+      }
+      // if month = 2 check day <= 29
+      if (parseInt(tmpValArr[0]) === 2 && parseInt(tmpValArr[1]) > 29) {
+        return true;
+      }
+    }
+  } else {
+    return true;
+  }
+  return false;
+};
+
+const dobDateValidate = (value) => {
   let tmpValArr = value.split("/");
   if (tmpValArr[0] && tmpValArr[1] && tmpValArr[2]) {
     if (parseInt(tmpValArr[0]) > 12 || parseInt(tmpValArr[0]) < 1) {
@@ -114,6 +148,15 @@ extend("date_format", (value) => {
     isError = dateValidate(value);
     return isError
       ? "{_field_} must be in the format MM/DD/YYYY(03/15/2020)"
+      : true;
+  }
+});
+extend("dob_date_format", (value) => {
+  if (value) {
+    let isError = false;
+    isError = dobDateValidate(value);
+    return isError
+      ? "{_field_} must be in the format MM-DD-YYYY(03-15-2023)"
       : true;
   }
 });
