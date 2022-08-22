@@ -28,10 +28,11 @@
     "vuetify": "^2.6.9"
   },
   "dependencies": {
+    "@xenterprises/x-forms-vuetify": "^1.1.17",
+    "tiptap-vuetify": "^2.24.0",
     "v-mask": "^2.2.4",
     "vee-validate": "^3.4.5",
     "vue-currency-filter": "^5.2.0",
-    "vue-currency-input": "^1.22.6",
-    "tiptap-vuetify": "^2.24.0"
+    "vue-currency-input": "^1.22.6"
   }
 }
